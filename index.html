@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing master</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <i>Typing Master</i> 
+    </header>
+    <main class="main">
+        <article class="intro">
+            <p> This is a typing test. Your goal is to duplicate the provided text , EXACTLY, in the
+                field below. The timer starts when you start typing, and only stops when you match this text 
+                exactly. Good Luck!
+            </p>
+        </article>
+        <section class="test-area">
+            <div id="original-text">
+                <p>Hello I am Sarthak shukla.</p>
+            </div>
+            <div class="text-wrapper">
+                <textarea id="text-area" rows="6" placeholder="The clock starts when you press start writing..."></textarea>
+            </div>
+            <div class="meta">                
+                <div id="clock" class="timer">00:00:00</div>
+                <button type="button" id="reset">Start Over</button>
+            </div>
+        </section>
+    </main>
+
+    
+</body>
+<script src="main.js"></script>
+</html>
