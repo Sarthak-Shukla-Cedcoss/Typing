@@ -1,4 +1,7 @@
 const clktimmer = document.querySelector("#clock");
+document.body.oncopy = function() { return false; }
+document.body.oncut = function() { return false; }
+document.body.onpaste = function() { return false; }
 const resetbtn = document.querySelector("#reset");
 const txtar = document.querySelector("#text-area");
 const orgtext = document.querySelector("#original-text p").innerHTML;
