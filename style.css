@@ -1,6 +1,10 @@
+body{
+    background-color: lightblue;
+}
 header{
-    background-color: #043531;
+    background-color: #000000;
     margin: 0%;
+    border-bottom: 1px solid black;
     text-align: center;
     color: white;
     font-size: 200%;
@@ -8,7 +12,7 @@ header{
     padding-bottom: 3%;
 }
 .intro{
-    background-color: #1f6eadc7;
+    background-color: #3d985d;
     padding-left:20%;
     padding-right:20%;
     margin: 0%;
@@ -29,7 +33,7 @@ header{
     border:15px solid grey;
 }
 .timer{
-    margin: 3%;
+    margin: 2%;
     font-size: 240%;
     width: 20%;
 }
