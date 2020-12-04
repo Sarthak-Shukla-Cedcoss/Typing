@@ -37,8 +37,20 @@ header{
     font-size: 240%;
     width: 20%;
 }
+#wpm{
+    float: right;
+    font-size: 150%;
+    color:  #3d985d;
+   margin-left: 2%; 
+}
+#error{
+    float: left;
+    font-size: 150%;
+    color: rgb(231, 23, 23) ;
+    margin-left: 2%;
+}
 button{
-    margin: 2%;
+    margin: 5%;
     padding:10px;
     color:rgb(231, 23, 23);
     background-color: white;
