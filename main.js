@@ -68,6 +68,6 @@ function reset(){
     document.querySelector("#error").innerHTML="";
 }
 
-txtar.addEventListener("keypress",start);
+txtar.addEventListener("keydown",start);
 txtar.addEventListener("keyup",spellcheck);
 resetbtn.addEventListener("click",reset);
