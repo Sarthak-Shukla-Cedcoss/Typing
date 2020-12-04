@@ -2,9 +2,13 @@ const clktimmer = document.querySelector("#clock");
 const resetbtn = document.querySelector("#reset");
 const txtar = document.querySelector("#text-area");
 const orgtext = document.querySelector("#original-text p").innerHTML;
+arr=orgtext.split(" ");
+var wpm;
+lenarr=arr.length;
 var timer = [0,0,0,0]
 var interval;
 var timerRunning = false;
+var flag = 0;
 function leadingZero(time){
     if(time<=9){
         time = "0" + time;
@@ -32,7 +36,13 @@ function spellcheck(){
     let orgtextsub = orgtext.substring(0,textEnter.length);
     if(textEnter == orgtext ){
         clearInterval(interval);
+        wpm = lenarr / (timer[0] + (timer[1]/60) +((timer[2]/60)/100));
+        console.log(wpm);
         txtar.style.borderColor="#3d985d";
+        let textlenght = txtar.value.length;
+        error = (flag / textlenght )*100;
+        document.querySelector("#wpm").innerHTML=Math.ceil(wpm)+" WPM";
+        document.querySelector("#error").innerHTML=Math.ceil(error)+"%  Errors"
     }
     else if(textEnter == orgtextsub)
     {
@@ -40,6 +50,7 @@ function spellcheck(){
     }
     else{
         txtar.style.borderColor="#ea3939";
+        flag++;
     }
 }
 function reset(){
@@ -50,6 +61,8 @@ function reset(){
     timerRunning = false;
     clktimmer.innerHTML = "00:00:00";
     txtar.style.borderColor="grey";
+    document.querySelector("#wpm").innerHTML="";
+    document.querySelector("#error").innerHTML="";
 }
 
 txtar.addEventListener("keypress",start);
